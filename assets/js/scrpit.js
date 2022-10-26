@@ -1,11 +1,18 @@
 
-
-// Prompt the user for input .prompt
-
 var record = {
     ties: 0,
     wins: 0,
     loses: 0,
+};
+
+function win() {
+    alert("You win!");
+    record.wins++;
+};
+
+function lose() {
+    alert("I win!");
+    record.loses++;
 };
 
 function play() {
@@ -26,31 +33,25 @@ function play() {
         // CHOOSE R
         else if (choice == "R") {
             if (rando == "P") {
-                alert("I win!");
-                record.loses++;
+                lose();
             } else {
-                alert("You win!");
-                record.wins++;
+                win();
             }
         }
         // CHOOSE P
         else if (choice == "P") {
             if (rando == "S") {
-                alert("I win!");
-                record.loses++;
+                lose();
             } else {
-                alert("You win!");
-                record.wins++;
+                win();
             }
         }
         // CHOOSE S
         else {
             if (rando == "R") {
-                alert("I win!");
-                record.loses++; 
+                lose();
             } else {
-                alert("You win!");
-                record.wins++;
+                win();
             }
         }
     };
